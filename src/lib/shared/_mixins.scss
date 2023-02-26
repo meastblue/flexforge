@@ -255,8 +255,7 @@
         .#{$prefix}#{$name}#{$colorName}-alpha {
             @each $shade in $shades {
                 &-#{$shade} {
-                    #{$prop}: #{"rgba(#{$colorValue},
-                    #{math.div($shade, 100)})"} !important;
+                    #{$prop}: #{"rgba(#{$colorValue}, #{math.div($shade, 100)})"} !important;
 
                 }
             }
@@ -266,8 +265,7 @@
             &#{$prefix}#{$name}#{$colorName}-alpha {
                 @each $shade in $shades {
                     &-#{$shade}:hover {
-                        #{$prop}: #{"rgba(#{$colorValue},
-                        #{math.div($shade, 100)})"} !important;
+                        #{$prop}: #{"rgba(#{$colorValue}, #{math.div($shade, 100)})"} !important;
 
                     }
                 }
@@ -278,8 +276,7 @@
             &#{$prefix}#{$name}#{$colorName}-alpha {
                 @each $shade in $shades {
                     &-#{$shade}:focus {
-                        #{$prop}: #{"rgba(#{$colorValue},
-                        #{math.div($shade, 100)})"} !important;
+                        #{$prop}: #{"rgba(#{$colorValue}, #{math.div($shade, 100)})"} !important;
 
                     }
                 }
@@ -290,8 +287,7 @@
             &#{$prefix}#{$name}#{$colorName}-alpha {
                 @each $shade in $shades {
                     &-#{$shade}:active {
-                        #{$prop}: #{"rgba(#{$colorValue},
-                        #{math.div($shade, 100)})"} !important;
+                        #{$prop}: #{"rgba(#{$colorValue},#{math.div($shade, 100)})"} !important;
 
                     }
                 }
@@ -301,7 +297,7 @@
 }
 
 @mixin spacing-class($inPrefix, $map, $scales, $responsive: true, $auto: false, $negative: false) {
-    $inPrefix: $prefix +$inPrefix;
+    $inPrefix: $prefix + $inPrefix;
 
     @each $name,
     $prop in $map {
